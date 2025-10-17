@@ -1,0 +1,121 @@
+/* ==============================
+   Base Styles (Mobile First)
+   0px - 767px
+============================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================
+   Tablet (768px and up)
+============================== */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  body {
+    background-color: #e8f0fe;
+  }
+}
+
+/* ==============================
+   Small Desktop (1024px and up)
+============================== */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .box {
+    padding: 2rem;
+  }
+
+  body {
+    background-color: #dee9ff;
+  }
+}
+
+/* ==============================
+   Large Desktop (1200px and up)
+============================== */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .box {
+    max-width: 250px;
+    margin: auto;
+  }
+
+  body {
+    background-color: #d1e0ff;
+  }
+}
+
+/* ==============================
+   Extra Large (1400px and up)
+============================== */
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  .box {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+
+  .box:hover {
+    transform: scale(1.1);
+  }
+
+  body {
+    background-color: #c3d4ff;
+  }
+}
