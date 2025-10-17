@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 10 - Media Query Demonstration</title>
+  <link rel="stylesheet" href="../Tasks_css/task10_mediaQuery.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Media Query Demo</h1>
+    <nav class="nav">
+      <button id="menuBtn">☰</button>
+      <ul id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="info">
+      <h2>Responsive Design Demonstration</h2>
+      <p>This page demonstrates how layout, typography, and navigation adapt to different screen sizes using CSS Media Queries.</p>
+    </section>
+
+    <section class="typography">
+      <h2>Typography Scaling</h2>
+      <p>Resize your browser window to see font sizes change for better readability on each device.</p>
+    </section>
+
+    <section class="layout">
+      <h2>Layout Changes</h2>
+      <div class="boxes">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+      </div>
+    </section>
+
+    <section class="breakpoint">
+      <h2>Breakpoint Indicator</h2>
+      <p>Current Screen Size: <span id="screenSize"></span></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Media Query Demo | Responsive Design Practice</p>
+  </footer>
+
+  <script>
+    const screenSize = document.getElementById("screenSize");
+    const navLinks = document.getElementById("navLinks");
+    const menuBtn = document.getElementById("menuBtn");
+
+    function updateSize() {
+      screenSize.textContent = window.innerWidth + "px";
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

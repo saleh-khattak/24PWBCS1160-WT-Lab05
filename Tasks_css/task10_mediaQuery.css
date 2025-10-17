@@ -1,0 +1,163 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f0f3f7;
+  color: #2f3640;
+}
+
+/* Header */
+.header {
+  background: #273c75;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+/* Navigation */
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+#menuBtn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Main Layout */
+.main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Boxes Layout */
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.box {
+  background: #40739e;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+  background: #273c75;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Typography Scaling */
+h2 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* ======================================
+   MEDIA QUERIES
+====================================== */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: #192a56;
+    width: 100%;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .nav ul.active {
+    display: flex;
+  }
+
+  #menuBtn {
+    display: block;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large Desktop View */
+@media (min-width: 1200px) {
+  body {
+    background-color: #eaf0f6;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+
+  .box {
+    background: #487eb0;
+  }
+}
