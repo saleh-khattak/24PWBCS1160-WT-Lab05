@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Tasks_css/task4_flexbox.css">
+    <title>Document</title>
+</head>
+<body>
+       <!-- ✅ checkbox must be sibling of sidebar -->
+  <input type="checkbox" id="menu-toggle">
+
+  <!-- ✅ hamburger comes immediately after checkbox -->
+  <label for="menu-toggle" class="menu-btn">
+    <span></span><span></span><span></span>
+  </label>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">MySite</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ sidebar placed after checkbox -->
+  <aside class="sidebar">
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </aside>
+
+  <main>
+    <h1>Welcome to My Responsive Navigation Demo</h1>
+    <p>This one is 100% working. Resize your screen and click the hamburger to open the sidebar.</p>
+  </main>
+</body>
+</html>
