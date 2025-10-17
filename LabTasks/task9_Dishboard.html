@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 9 - Responsive Dashboard Layout</title>
+  <link rel="stylesheet" href="../Tasks_css/task9_Dishboard.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Analytics</a>
+        <a href="#">Products</a>
+        <a href="#">Settings</a>
+      </nav>
+    </aside>
+
+    <!-- Header -->
+    <header class="header">
+      <button id="toggleSidebar">☰</button>
+      <h1>Admin Dashboard</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Stat Cards -->
+      <section class="stats">
+        <div class="card">
+          <h3>Users</h3>
+          <p>1,240</p>
+        </div>
+        <div class="card">
+          <h3>Sales</h3>
+          <p>$8,920</p>
+        </div>
+        <div class="card">
+          <h3>Orders</h3>
+          <p>320</p>
+        </div>
+        <div class="card">
+          <h3>Revenue</h3>
+          <p>$25,640</p>
+        </div>
+      </section>
+
+      <!-- Charts or Tables -->
+      <section class="content">
+        <div class="chart">
+          <h2>Sales Overview</h2>
+          <p>Chart placeholder...</p>
+        </div>
+        <div class="chart">
+          <h2>Recent Activity</h2>
+          <p>Activity logs...</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const sidebar = document.querySelector(".sidebar");
+    const toggle = document.getElementById("toggleSidebar");
+
+    toggle.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
