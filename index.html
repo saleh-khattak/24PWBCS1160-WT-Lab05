@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web Design Tasks | CS 224L</title>
+  <style>
+    /* ==============================
+   Global Styles
+============================== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 1.5rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header h2 {
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+header p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Task List */
+main {
+  padding: 2rem 1rem;
+}
+
+.tasks {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}
+
+.tasks h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #007bff;
+}
+
+ol {
+  list-style: decimal-leading-zero;
+  padding-left: 1.5rem;
+}
+
+ol li {
+  margin: 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* ==============================
+   Responsive Design
+============================== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .tasks {
+    padding: 1rem;
+  }
+
+  ol li {
+    font-size: 0.9rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CS 224L - Web Technologies</h1>
+    <h2>Responsive Design Assignment</h2>
+    <p>By: Muhammad Saleh | University of Engineering & Technology, Peshawar</p>
+  </header>
+
+  <main>
+    <section class="tasks">
+      <h3>Lab Tasks List</h3>
+      <ol>
+        <li><a href="LabTasks/task1_display_property.html">Task 1: Display Property</a></li>
+        <li><a href="LabTasks/task2_magazine.html">Task 2: Magazine Layout</a></li>
+        <li><a href="LabTasks/task3_position.html">Task 3: Position</a></li>
+        <li><a href="LabTasks/task4_flexbox.html">Task 4: Flexbox Layout</a></li>
+        <li><a href="LabTasks/task5_flexbox.html">Task 5: Flexbox Card Layout</a></li>
+        <li><a href="LabTasks/task6_Grlde.html">Task 6: CSS Grid Photo Gallery</a></li>
+        <li><a href="LabTasks/task7_holyGrail.html">Task 7: Holy Grail Layout</a></li>
+        <li><a href="LabTasks/task8_E_comrace.html">Task 8: E-Commerce Product Grid</a></li>
+        <li><a href="LabTasks/task9_Dishboard.html">Task 9: Dashboard Layout</a></li>
+        <li><a href="LabTasks/task10_mediaQuery.html">Task 10: Media Query Demo</a></li>
+        <li><a href="LabTasks/task11_reponsive_css_Grlde.html">Task 11: Responsive CSS Grid Magazine</a></li>
+        <li><a href="LabTasks/task12_form_builder.html">Task 12: Flexbox Form Builder</a></li>
+        <li><a href="LabTasks/task13_portfolio_layout.html">Task 13: Portfolio Layout</a></li>
+        <li><a href="LabTasks/task14_DataTable.html">Task 14: Responsive Data Table</a></li>
+        <li><a href="LabTasks/task15_mobile_responsive.html">Task 15: Mobile-First Landing Page</a></li>
+        <li><a href="LabTasks/task16_breakPoints.html">Task 16: Common Breakpoint Implementation</a></li>
+        <li><a href="LabTasks/task17_UtilityClasses.html">Task 17: Responsive Utility Classes</a></li>
+        <li><a href="LabTasks/task18_DarkMode.html">Task 18: Dark Mode & Preference Media Queries</a></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Department of Computer Science, UET Peshawar</p>
+  </footer>
+</body>
+</html>
