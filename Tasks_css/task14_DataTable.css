@@ -1,0 +1,134 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  color: #2f3640;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+/* ========== HEADER ========== */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #273c75;
+}
+
+/* ========== TABLE CONTAINER ========== */
+.table-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* ========== BASE TABLE STYLES ========== */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.responsive-table thead {
+  background: #273c75;
+  color: #fff;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.responsive-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.responsive-table tbody tr:hover {
+  background: #f1f2f6;
+}
+
+/* ========== RESPONSIVE BEHAVIOR ========== */
+
+/* Tablet: Convert to card layout */
+@media (max-width: 992px) {
+  .responsive-table {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  tbody tr {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    padding: 1rem;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #273c75;
+  }
+}
+
+/* Mobile: Stack as single column cards */
+@media (max-width: 600px) {
+  tbody {
+    grid-template-columns: 1fr;
+  }
+
+  tbody tr {
+    border-left: 5px solid #273c75;
+  }
+
+  tbody td {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  tbody td::before {
+    margin-bottom: 0.3rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #718093;
+  font-size: 0.9rem;
+}

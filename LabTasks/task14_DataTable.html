@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 14 - Responsive Data Table</title>
+  <link rel="stylesheet" href="../Tasks_css/task14_DataTable.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Responsive Data Table</h1>
+    <p>Adapts from full table → cards → stacked layout</p>
+  </header>
+
+  <main class="table-container">
+    <table class="responsive-table">
+      <thead>
+        <tr>
+          <th scope="col">Product</th>
+          <th scope="col">Category</th>
+          <th scope="col">Price</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Product">Wireless Headphones</td>
+          <td data-label="Category">Electronics</td>
+          <td data-label="Price">$59.99</td>
+          <td data-label="Stock">Available</td>
+          <td data-label="Rating">★★★★☆</td>
+        </tr>
+        <tr>
+          <td data-label="Product">Gaming Mouse</td>
+          <td data-label="Category">Accessories</td>
+          <td data-label="Price">$29.99</td>
+          <td data-label="Stock">Low Stock</td>
+          <td data-label="Rating">★★★☆☆</td>
+        </tr>
+        <tr>
+          <td data-label="Product">Smart Watch</td>
+          <td data-label="Category">Wearables</td>
+          <td data-label="Price">$149.00</td>
+          <td data-label="Stock">Available</td>
+          <td data-label="Rating">★★★★★</td>
+        </tr>
+        <tr>
+          <td data-label="Product">Bluetooth Speaker</td>
+          <td data-label="Category">Audio</td>
+          <td data-label="Price">$39.99</td>
+          <td data-label="Stock">Out of Stock</td>
+          <td data-label="Rating">★★★☆☆</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Responsive Design Demo | Accessible & Mobile-Friendly</p>
+  </footer>
+</body>
+</html>
