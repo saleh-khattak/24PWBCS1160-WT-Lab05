@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CS 224L - Mobile First Landing Page | UET Peshawar" />
+  <title>Task 15 - Mobile First Landing Page</title>
+  <link rel="stylesheet" href="../Tasks_css/task15_mobile_responsive.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">UET<span>Peshawar</span></div>
+    <nav class="nav">
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Faculty</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <picture>
+      <!-- Mobile-first image -->
+      <source media="(min-width: 1024px)" srcset="https://picsum.photos/1200/500?1">
+      <source media="(min-width: 600px)" srcset="https://picsum.photos/800/400?2">
+      <img src="https://picsum.photos/400/300?3" alt="UET Campus" loading="lazy" />
+    </picture>
+    <div class="hero-text">
+      <h1>Welcome to CS 224L – Web Technologies</h1>
+      <p>Learn modern, responsive web development guided by Mr. Mohammad, Lecturer.</p>
+      <a href="#" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <main class="content">
+    <section class="about">
+      <h2>About the Course</h2>
+      <p>
+        CS 224L focuses on practical web technologies, responsive design,
+        and full-stack development fundamentals. Students gain hands-on experience
+        building modern, mobile-friendly websites.
+      </p>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <img src="https://picsum.photos/100/100?4" alt="HTML5" loading="lazy">
+        <h3>HTML 5</h3>
+        <p>Semantic, accessible structures for modern web pages.</p>
+      </div>
+      <div class="feature">
+        <img src="https://picsum.photos/100/100?5" alt="CSS3" loading="lazy">
+        <h3>CSS 3</h3>
+        <p>Responsive, flexible, and elegant visual design.</p>
+      </div>
+      <div class="feature">
+        <img src="https://picsum.photos/100/100?6" alt="JavaScript" loading="lazy">
+        <h3>JavaScript</h3>
+        <p>Interactive experiences and dynamic content for users.</p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Information</h2>
+      <p>Department of Computer Science<br>
+        University of Engineering & Technology, Peshawar</p>
+      <a href="#" class="btn-secondary">Visit Department Site</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Department of Computer Science | UET Peshawar</p>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
