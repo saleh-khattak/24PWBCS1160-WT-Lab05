@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holy Grail Layouts — Float, Flexbox & Grid</title>
+  <link rel="stylesheet" href="../Tasks_css/task7_holyGrail.css" />
+</head>
+<body>
+
+  <h1 class="title">Holy Grail Layout Implementations</h1>
+
+  <div class="buttons">
+    <button onclick="showLayout('float')">Float Layout</button>
+    <button onclick="showLayout('flex')">Flexbox Layout</button>
+    <button onclick="showLayout('grid')">Grid Layout</button>
+  </div>
+
+  <!-- Float Layout -->
+  <section id="float" class="layout">
+    <h2>1️⃣ Float-based Layout</h2>
+    <div class="wrapper">
+      <header class="site-header">Header</header>
+      <aside class="left">Left Sidebar</aside>
+      <main class="main">Main Content (Float Layout)</main>
+      <aside class="right">Right Sidebar</aside>
+      <footer class="site-footer">Footer</footer>
+    </div>
+  </section>
+
+  <!-- Flexbox Layout -->
+  <section id="flex" class="layout hidden">
+    <h2>2️⃣ Flexbox Layout</h2>
+    <div class="page">
+      <header class="site-header">Header</header>
+      <div class="content">
+        <aside class="left">Left Sidebar</aside>
+        <main class="main">Main Content (Flexbox Layout)</main>
+        <aside class="right">Right Sidebar</aside>
+      </div>
+      <footer class="site-footer">Footer</footer>
+    </div>
+  </section>
+
+  <!-- Grid Layout -->
+  <section id="grid" class="layout hidden">
+    <h2>3️⃣ CSS Grid Layout</h2>
+    <div class="grid-page">
+      <header class="site-header">Header</header>
+      <aside class="left">Left Sidebar</aside>
+      <main class="main">Main Content (Grid Layout)</main>
+      <aside class="right">Right Sidebar</aside>
+      <footer class="site-footer">Footer</footer>
+    </div>
+  </section>
+
+  <script>
+    function showLayout(id) {
+      document.querySelectorAll('.layout').forEach(l => l.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
