@@ -1,0 +1,144 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #2f3640;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #192a56;
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #dcdde1;
+}
+
+/* Magazine Grid Layout */
+.magazine-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas:
+    "main side1 side2"
+    "feature feature side2"
+    "small1 small2 side2";
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+/* Article Areas */
+.main-article { grid-area: main; }
+.feature { grid-area: feature; }
+.side-article:nth-of-type(2) { grid-area: side1; }
+.side-article:nth-of-type(3) { grid-area: side2; }
+.small-article:nth-of-type(5) { grid-area: small1; }
+.small-article:nth-of-type(6) { grid-area: small2; }
+
+/* Article Styles */
+article {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+article .content {
+  padding: 1rem;
+}
+
+article h2, article h3, article h4 {
+  margin-bottom: 0.5rem;
+  color: #192a56;
+}
+
+article p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #192a56;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+/* Tablet View - Simplified Symmetric Grid */
+@media (max-width: 1024px) {
+  .magazine-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "main main"
+      "side1 side2"
+      "feature feature"
+      "small1 small2";
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  article p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile View - Single Column Layout */
+@media (max-width: 768px) {
+  .magazine-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "side1"
+      "side2"
+      "feature"
+      "small1"
+      "small2";
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  article h2, article h3, article h4 {
+    font-size: 1rem;
+  }
+
+  article p {
+    font-size: 0.85rem;
+  }
+}
